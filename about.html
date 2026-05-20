@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | The Agafay Retreat</title>
-    <meta name="description" content="Learn about The Agafay Retreat, a stone desert sanctuary near Marrakech." />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body data-page="about">
-    <a class="skip-link" href="#main" data-i18n="skip_to_content">Skip to content</a>
-    <header class="site-header is-solid" data-header>
-      <div class="header-inner">
-        <a class="logo" href="index.html" aria-label="The Agafay Retreat home"><img src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo" /></a>
-        <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html" data-i18n="nav_home">Home</a><a href="about.html" data-i18n="nav_about" aria-current="page">About</a><a href="the-experience.html" data-i18n="nav_experiences">Experiences</a><a href="contact.html" data-i18n="nav_contact">Contact</a></nav>
-        <div class="header-actions"><label class="language-wrap"><span class="sr-only" data-i18n="language_label">Language</span><select data-language-select aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option></select></label><a class="button button-primary header-button" href="contact.html" data-i18n="book_now">Book Now</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle><span class="sr-only" data-i18n="menu_toggle">Open menu</span><span></span><span></span><span></span></button></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="about_meta_title">About | The Agafay Retreat</title>
+  <meta name="description" content="Learn about The Agafay Retreat, a stone desert sanctuary near Marrakech."
+    data-i18n-content="about_meta_description" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body data-page="about">
+  <a class="skip-link" href="#main" data-i18n="skip_to_content">Skip to content</a>
+  <header class="site-header is-solid" data-header>
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="The Agafay Retreat home"
+        data-i18n-aria-label="brand_home_label"><img src="./assets/images/logo.png" width="220" height="145"
+          alt="Agafay Silent Logo" data-i18n-alt="logo_alt" /></a>
+      <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria-label="nav_main_label"><a href="index.html"
+          data-i18n="nav_home">Home</a><a href="about.html" data-i18n="nav_about" aria-current="page">About</a><a
+          href="the-experience.html" data-i18n="nav_experiences">Experiences</a><a href="contact.html"
+          data-i18n="nav_contact">Contact</a></nav>
+      <div class="header-actions"><label class="language-wrap"><span class="sr-only"
+            data-i18n="language_label">Language</span><select
+      data-language-select
+      aria-label="Language"
+      data-i18n-aria-label="language_label"
+    >
+      <option value="en" data-i18n="language_option_en">EN</option>
+      <option value="fr" data-i18n="language_option_fr">FR</option>
+      <option value="ar" data-i18n="language_option_ar">AR</option>
+      <option value="de" data-i18n="language_option_de">DE</option>
+      <option value="it" data-i18n="language_option_it">IT</option>
+      <option value="pt" data-i18n="language_option_pt">PT</option>
+    </select></label><a class="button button-primary header-button" href="contact.html" data-i18n="book_now">Book
+          Now</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+          data-menu-toggle><span class="sr-only" data-i18n="menu_toggle">Open
+            menu</span><span></span><span></span><span></span></button></div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <nav aria-label="Mobile navigation" data-i18n-aria-label="nav_mobile_label"><a href="index.html"
+          data-i18n="nav_home">Home</a><a href="about.html" data-i18n="nav_about" aria-current="page">About</a><a
+          href="the-experience.html" data-i18n="nav_experiences">Experiences</a><a href="contact.html"
+          data-i18n="nav_contact">Contact</a></nav><a class="button button-primary" href="contact.html"
+        data-i18n="book_now">Book Now</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <img class="hero-image" src="./assets/images/architecture.jpeg" width="1400" height="1600" alt=""
+        fetchpriority="high" />
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="page-hero-content reveal"><span data-i18n="about_kicker">About the retreat</span>
+        <h1 data-i18n="about_hero_title">A place shaped by silence, stone, and horizon.</h1>
+        <p data-i18n="about_hero_text">The Agafay Retreat is built around the rare stillness of the stone desert, close
+          enough to Marrakech to arrive with ease and quiet enough to feel far from everything.</p>
       </div>
-      <div class="mobile-menu" id="mobile-menu" data-mobile-menu><nav><a href="index.html" data-i18n="nav_home">Home</a><a href="about.html" data-i18n="nav_about" aria-current="page">About</a><a href="the-experience.html" data-i18n="nav_experiences">Experiences</a><a href="contact.html" data-i18n="nav_contact">Contact</a></nav><a class="button button-primary" href="contact.html" data-i18n="book_now">Book Now</a></div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section class="page-hero">
-        <img class="hero-image" src="./assets/images/architecture.jpeg" width="1400" height="1600" alt="" fetchpriority="high" />
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="page-hero-content reveal"><span data-i18n="about_kicker">About the retreat</span><h1 data-i18n="about_hero_title">A place shaped by silence, stone, and horizon.</h1><p data-i18n="about_hero_text">The Agafay Retreat is built around the rare stillness of the stone desert, close enough to Marrakech to arrive with ease and quiet enough to feel far from everything.</p></div>
-      </section>
-
-      <section class="section">
-        <div class="container two-col">
-          <div class="section-copy reveal"><span data-i18n="brand_story">Brand story</span><h2 data-i18n="about_story_title">Designed for deep rest and connection with the horizon.</h2><p data-i18n="about_story_text">A sanctuary of pure silence in the heart of the stone desert. Designed for those who seek deep rest and connection with the horizon.</p><p data-i18n="about_story_text_2">The retreat keeps the experience intentional: warm Moroccan hospitality, sculptural desert views, private moments, and a slower rhythm under the Agafay sky.</p></div>
-          <figure class="image-frame reveal"><img src="./assets/images/villa.jpeg" width="900" height="1100" alt="Luxury Desert Villa" loading="lazy" /></figure>
+    <section class="section">
+      <div class="container two-col">
+        <div class="section-copy reveal"><span data-i18n="brand_story">Brand story</span>
+          <h2 data-i18n="about_story_title">Designed for deep rest and connection with the horizon.</h2>
+          <p data-i18n="about_story_text">A sanctuary of pure silence in the heart of the stone desert. Designed for
+            those who seek deep rest and connection with the horizon.</p>
+          <p data-i18n="about_story_text_2">The retreat keeps the experience intentional: warm Moroccan hospitality,
+            sculptural desert views, private moments, and a slower rhythm under the Agafay sky.</p>
         </div>
-      </section>
-
-      <section class="section band" id="location">
-        <div class="container two-col reverse">
-          <figure class="image-frame wide reveal"><img src="./assets/images/transfer.jpg" width="900" height="700" alt="Marrakech Medina Gates" loading="lazy" /></figure>
-          <div class="section-copy reveal"><span data-i18n="why_agafay">Why Agafay</span><h2 data-i18n="why_agafay_title">Forty-five minutes from Marrakech. A world apart in feeling.</h2><p data-i18n="why_agafay_text">Located just forty-five minutes from the vibrant energy of Marrakech, Agafay offers a stark, beautiful contrast. A stone desert of sculptural dunes and infinite stillness.</p><div class="service-note" data-i18n="medina_pickup">Complimentary Medina Pick-up</div></div>
-        </div>
-      </section>
-
-      <section class="section" id="values">
-        <div class="container">
-          <div class="section-heading reveal"><span data-i18n="values_kicker">Values & atmosphere</span><h2 data-i18n="values_title">Luxury here is not noise. It is space, rhythm, and care.</h2></div>
-          <div class="values-grid">
-            <article class="value-card reveal"><h3 data-i18n="value_silence">Pure silence</h3><p data-i18n="value_silence_text">A retreat into the absolute stillness of the desert night.</p></article>
-            <article class="value-card reveal"><h3 data-i18n="value_hospitality">Moroccan hospitality</h3><p data-i18n="value_hospitality_text">Gentle service, ancestral dining, and details shaped around each guest.</p></article>
-            <article class="value-card reveal"><h3 data-i18n="value_arrival">Seamless arrivals</h3><p data-i18n="value_arrival_text">Your journey to the silent horizon begins with ease from Marrakech.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-panel"><div class="container reveal"><h2 data-i18n="about_cta_title">Begin with the experience, or reserve the stillness.</h2><div class="hero-actions"><a class="button button-primary" href="contact.html" data-i18n="book_now">Book Now</a><a class="button button-secondary" href="the-experience.html" data-i18n="view_experiences">View Experiences</a></div></div></section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><img class="footer-logo" src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo" loading="lazy" /><p data-i18n="footer_desc">A sanctuary of pure silence in the heart of the stone desert. Designed for those who seek deep rest and connection with the horizon.</p></div>
-        <nav aria-label="Explore"><h2 data-i18n="explore">Explore</h2><a href="index.html" data-i18n="footer_retreat">The Retreat</a><a href="the-experience.html" data-i18n="footer_experiences">Curated Experiences</a><a href="contact.html" data-i18n="footer_villas">Private Villas</a><a href="the-experience.html" data-i18n="footer_dining">Ancestral Dining</a><a href="about.html" data-i18n="footer_wellness">Wellness Rituals</a></nav>
-        <nav aria-label="Information"><h3>Information</h3><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cancellation-policy.html">Cancellation Policy</a><a href="contact.html">Contact</a></nav>
-        <div><h2 data-i18n="footer_contact">Contact Us</h2><p data-i18n="footer_contact_text">Fast booking by WhatsApp, phone, or email.</p><a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener" data-i18n="mobile_whatsapp">WhatsApp</a><a href="tel:+212600111768" data-i18n="mobile_call">Call</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=serenity@agafayretreat.com&su=Booking%20request%20-%20The%20Agafay%20Retreat" target="_blank" rel="noopener" data-i18n="email">Email</a><label class="footer-language"><span data-i18n="language_label">Language</span><select data-footer-language aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option></select></label></div>
+        <figure class="image-frame reveal"><img src="./assets/images/villa.jpeg" width="900" height="1100"
+            alt="Luxury Desert Villa" data-i18n-alt="villa_alt" loading="lazy" /></figure>
       </div>
-      <div class="container footer-bottom"><span data-i18n="copyright">&copy; 2024 Agafay Silent Retreat. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="cancellation-policy.html">Cancellation Policy</a></span></div>
-    </footer>
-    <div class="mobile-cta-bar"><a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener" data-i18n="mobile_whatsapp">WhatsApp</a><a href="contact.html" data-i18n="mobile_book">Book Now</a><a href="tel:+212600111768" data-i18n="mobile_call">Call</a></div>
-    <script src="./js/translations.js"></script><script src="./js/main.js"></script>
-  </body>
+    </section>
+
+    <section class="section band" id="location">
+      <div class="container two-col reverse">
+        <figure class="image-frame wide reveal"><img src="./assets/images/transfer.jpg" width="900" height="700"
+            alt="Marrakech Medina Gates" data-i18n-alt="transfer_alt" loading="lazy" /></figure>
+        <div class="section-copy reveal"><span data-i18n="why_agafay">Why Agafay</span>
+          <h2 data-i18n="why_agafay_title">Forty-five minutes from Marrakech. A world apart in feeling.</h2>
+          <p data-i18n="why_agafay_text">Located just forty-five minutes from the vibrant energy of Marrakech, Agafay
+            offers a stark, beautiful contrast. A stone desert of sculptural dunes and infinite stillness.</p>
+          <div class="service-note" data-i18n="medina_pickup">Complimentary Medina Pick-up</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="values">
+      <div class="container">
+        <div class="section-heading reveal"><span data-i18n="values_kicker">Values & atmosphere</span>
+          <h2 data-i18n="values_title">Luxury here is not noise. It is space, rhythm, and care.</h2>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <h3 data-i18n="value_silence">Pure silence</h3>
+            <p data-i18n="value_silence_text">A retreat into the absolute stillness of the desert night.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3 data-i18n="value_hospitality">Moroccan hospitality</h3>
+            <p data-i18n="value_hospitality_text">Gentle service, ancestral dining, and details shaped around each
+              guest.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3 data-i18n="value_arrival">Seamless arrivals</h3>
+            <p data-i18n="value_arrival_text">Your journey to the silent horizon begins with ease from Marrakech.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-panel">
+      <div class="container reveal">
+        <h2 data-i18n="about_cta_title">Begin with the experience, or reserve the stillness.</h2>
+        <div class="hero-actions"><a class="button button-primary" href="contact.html" data-i18n="book_now">Book
+            Now</a><a class="button button-secondary" href="the-experience.html" data-i18n="view_experiences">View
+            Experiences</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo"
+          data-i18n-alt="logo_alt" loading="lazy" />
+        <p data-i18n="footer_desc">A sanctuary of pure silence in the heart of the stone desert. Designed for those who
+          seek deep rest and connection with the horizon.</p>
+      </div>
+      <nav aria-label="Explore" data-i18n-aria-label="nav_explore_label">
+        <h2 data-i18n="explore">Explore</h2><a href="index.html" data-i18n="footer_retreat">The Retreat</a><a
+          href="the-experience.html" data-i18n="footer_experiences">Curated Experiences</a><a href="contact.html"
+          data-i18n="footer_villas">Private Villas</a><a href="the-experience.html" data-i18n="footer_dining">Ancestral
+          Dining</a><a href="about.html" data-i18n="footer_wellness">Wellness Rituals</a>
+      </nav>
+      <nav aria-label="Information" data-i18n-aria-label="nav_information_label">
+        <h3 data-i18n="info_heading">Information</h3><a href="privacy-policy.html" data-i18n="privacy">Privacy
+          Policy</a><a href="terms.html" data-i18n="terms">Terms &amp; Conditions</a><a href="cancellation-policy.html"
+          data-i18n="cancellation">Cancellation Policy</a><a href="contact.html" data-i18n="contact">Contact</a>
+      </nav>
+      <div>
+        <h2 data-i18n="footer_contact">Contact Us</h2>
+        <p data-i18n="footer_contact_text">Fast booking by WhatsApp, phone, or email.</p><a
+          href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener"
+          data-i18n="mobile_whatsapp">WhatsApp</a><a href="tel:+212600111768" data-i18n="mobile_call">Call</a><a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=serenity@agafayretreat.com&su=Booking%20request%20-%20The%20Agafay%20Retreat"
+          target="_blank" rel="noopener" data-i18n="email">Email</a><label class="footer-language"><span
+            data-i18n="language_label">Language</span><select data-footer-language aria-label="Language"
+            data-i18n-aria-label="language_label">
+            <option value="en" data-i18n="language_option_en">EN</option>
+            <option value="fr" data-i18n="language_option_fr">FR</option>
+            <option value="ar" data-i18n="language_option_ar">AR</option>
+            <option value="de" data-i18n="language_option_de">DE</option>
+            <option value="it" data-i18n="language_option_it">IT</option>
+            <option value="pt" data-i18n="language_option_pt">PT</option>
+          </select></label>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span data-i18n="copyright">&copy; 2024 Agafay Silent Retreat. All rights
+        reserved.</span><span><a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a> &middot; <a
+          href="terms.html" data-i18n="terms">Terms &amp; Conditions</a> &middot; <a href="cancellation-policy.html"
+          data-i18n="cancellation">Cancellation Policy</a></span></div>
+  </footer>
+  <div class="mobile-cta-bar"><a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank"
+      rel="noopener" data-i18n="mobile_whatsapp">WhatsApp</a><a href="contact.html" data-i18n="mobile_book">Book
+      Now</a><a href="tel:+212600111768" data-i18n="mobile_call">Call</a></div>
+  <script src="./js/translations.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,9 @@
+const CONFIG = {
+  whatsappNumber: "212633049321",
+  phoneNumber: "+212600111768",
+  emailAddress: "serenity@agafayretreat.com"
+};
+
 const selectors = {
   header: "[data-header]",
   menuToggle: "[data-menu-toggle]",
@@ -5,43 +11,80 @@ const selectors = {
   language: "[data-language-select]",
   footerLanguage: "[data-footer-language]",
   reveal: ".reveal",
-  track: "[data-testimonial-track]",
-  prev: "[data-prev]",
-  next: "[data-next]",
-  newsletter: "[data-newsletter-form]",
   form: "[data-booking-form]",
-  accordion: "[data-accordion]"
+  accordion: "[data-accordion]",
+  whatsappLink: "[data-whatsapp-link]",
+  phoneLink: "[data-phone-link]",
+  emailLink: "[data-email-link]",
+  galleryFilter: "[data-gallery-filter]",
+  galleryItem: "[data-gallery-item]"
 };
 
 const state = {
-  language: localStorage.getItem("agafayLanguage") || "en"
+  language: localStorage.getItem("agafayLanguage") || localStorage.getItem("siteLanguage") || "en"
 };
 
-function t(key) {
+function translate(key) {
   return (translations[state.language] && translations[state.language][key]) || translations.en[key] || key;
 }
 
 function setLanguage(language) {
   if (!translations[language]) return;
+
   state.language = language;
   localStorage.setItem("agafayLanguage", language);
+  localStorage.setItem("siteLanguage", language);
   document.documentElement.lang = language;
   document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    node.textContent = t(node.dataset.i18n);
+    node.textContent = translate(node.dataset.i18n);
   });
 
   document.querySelectorAll("[data-i18n-html]").forEach((node) => {
-    node.innerHTML = t(node.dataset.i18nHtml);
+    node.innerHTML = translate(node.dataset.i18nHtml);
   });
 
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
-    node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
+    node.setAttribute("placeholder", translate(node.dataset.i18nPlaceholder));
+  });
+
+  document.querySelectorAll("[data-i18n-content]").forEach((node) => {
+    node.setAttribute("content", translate(node.dataset.i18nContent));
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((node) => {
+    node.setAttribute("alt", translate(node.dataset.i18nAlt));
+  });
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
+    node.setAttribute("aria-label", translate(node.dataset.i18nAriaLabel));
+  });
+
+  document.querySelectorAll("[data-i18n-title]").forEach((node) => {
+    node.setAttribute("title", translate(node.dataset.i18nTitle));
   });
 
   document.querySelectorAll(`${selectors.language}, ${selectors.footerLanguage}`).forEach((select) => {
     select.value = language;
+  });
+
+  const translatedTitle = translate("meta_title");
+  if (translatedTitle !== "meta_title") {
+    document.title = translatedTitle;
+  }
+}
+
+function setupContactLinks() {
+  const message = encodeURIComponent(translate("whatsapp_default_message"));
+  document.querySelectorAll(selectors.whatsappLink).forEach((link) => {
+    link.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${message}`;
+  });
+  document.querySelectorAll(selectors.phoneLink).forEach((link) => {
+    link.href = `tel:${CONFIG.phoneNumber}`;
+  });
+  document.querySelectorAll(selectors.emailLink).forEach((link) => {
+    link.href = `mailto:${CONFIG.emailAddress}?subject=${encodeURIComponent("Booking request - The Agafay Retreat")}`;
   });
 }
 
@@ -52,7 +95,7 @@ function setupHeader() {
   if (!header || !toggle || !menu) return;
 
   const syncHeader = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 40);
+    header.classList.toggle("is-scrolled", window.scrollY > 30);
   };
 
   const closeMenu = () => {
@@ -84,59 +127,41 @@ function setupHeader() {
 
 function setupLanguages() {
   document.querySelectorAll(`${selectors.language}, ${selectors.footerLanguage}`).forEach((select) => {
-    select.addEventListener("change", (event) => setLanguage(event.target.value));
+    select.addEventListener("change", (event) => {
+      setLanguage(event.target.value);
+      setupContactLinks();
+    });
   });
   setLanguage(state.language);
-}
-
-function setupTestimonials() {
-  const track = document.querySelector(selectors.track);
-  const prev = document.querySelector(selectors.prev);
-  const next = document.querySelector(selectors.next);
-  if (!track || !prev || !next) return;
-
-  const scrollByCard = (direction) => {
-    const card = track.querySelector(".testimonial-card");
-    if (!card) return;
-    const gap = parseInt(window.getComputedStyle(track).gap, 10) || 18;
-    track.scrollBy({ left: direction * (card.offsetWidth + gap), behavior: "smooth" });
-  };
-
-  prev.addEventListener("click", () => scrollByCard(-1));
-  next.addEventListener("click", () => scrollByCard(1));
-}
-
-function setupNewsletter() {
-  const form = document.querySelector(selectors.newsletter);
-  if (!form) return;
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    form.reset();
-  });
+  setupContactLinks();
 }
 
 function setupBookingForm() {
   const form = document.querySelector(selectors.form);
   if (!form) return;
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
+
     const data = new FormData(form);
     const lines = [
-      t("whatsapp_intro"),
+      translate("whatsapp_intro"),
       "",
-      `${t("form_name")}: ${(data.get("name") || "").trim() || "-"}`,
-      `${t("form_email")}: ${(data.get("email") || "").trim() || "-"}`,
-      `${t("form_phone")}: ${(data.get("phone") || "").trim() || "-"}`,
-      `${t("form_date")}: ${data.get("date") || "-"}`,
-      `${t("form_guests")}: ${data.get("guests") || "-"}`,
-      `${t("form_interest")}: ${data.get("interest") || "-"}`,
-      `${t("form_message")}: ${(data.get("message") || "").trim() || "-"}`
+      `${translate("form_name")}: ${(data.get("name") || "").trim() || "-"}`,
+      `${translate("form_email")}: ${(data.get("email") || "").trim() || "-"}`,
+      `${translate("form_phone")}: ${(data.get("phone") || "").trim() || "-"}`,
+      `${translate("form_date")}: ${data.get("date") || "-"}`,
+      `${translate("form_guests")}: ${data.get("guests") || "-"}`,
+      `${translate("form_interest")}: ${data.get("interest") || "-"}`,
+      `${translate("form_message")}: ${(data.get("message") || "").trim() || "-"}`
     ];
-    window.open(`https://api.whatsapp.com/send?phone=212633049321&text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+
+    const url = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank", "noopener");
   });
 }
 
@@ -146,6 +171,23 @@ function setupAccordion() {
       const item = button.closest(".faq-item");
       const isOpen = item.classList.toggle("is-open");
       button.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+}
+
+function setupGallery() {
+  const filters = document.querySelectorAll(selectors.galleryFilter);
+  const items = document.querySelectorAll(selectors.galleryItem);
+  if (!filters.length || !items.length) return;
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.galleryFilter;
+      filters.forEach((node) => node.classList.toggle("is-active", node === button));
+      items.forEach((item) => {
+        const shouldShow = filter === "all" || item.dataset.galleryItem === filter;
+        item.hidden = !shouldShow;
+      });
     });
   });
 }
@@ -166,7 +208,7 @@ function setupReveal() {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.13 }
   );
 
   nodes.forEach((node) => observer.observe(node));
@@ -175,9 +217,8 @@ function setupReveal() {
 document.addEventListener("DOMContentLoaded", () => {
   setupHeader();
   setupLanguages();
-  setupTestimonials();
-  setupNewsletter();
   setupBookingForm();
   setupAccordion();
+  setupGallery();
   setupReveal();
 });
