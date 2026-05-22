@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,65 +9,22 @@
     content="The Silent Horizon. A cinematic desert retreat in Agafay, forty-five minutes from Marrakech." data-i18n-content="home_meta_description" />
   <meta property="og:title" content="The Agafay Retreat" data-i18n-content="home_meta_title" />
   <meta property="og:description" content="A sanctuary of pure silence in the heart of the stone desert." data-i18n-content="home_og_description" />
-  <meta property="og:image" content="./assets/images/hero-desert.jpg" />
+  <meta property="og:image" content="./assets/img/hero-desert.jpg" />
   <meta property="og:type" content="website" />
-  <link rel="preload" href="./assets/images/hero-desert.jpg" as="image" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preload" href="./assets/img/hero-desert.jpg" as="image" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body data-page="home">
   <a class="skip-link" href="#main" data-i18n="skip_to_content">Skip to content</a>
 
-  <header class="site-header" data-header>
-    <div class="header-inner">
-      <a class="brand logo" href="index.html" aria-label="The Agafay Retreat home" data-i18n-aria-label="brand_home_label">
-        <img src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo" data-i18n-alt="logo_alt" />
-        <span data-i18n="brand_name">The Agafay Retreat</span>
-      </a>
+  <div data-site-nav></div>
 
-      <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria-label="nav_main_label">
-        <a href="index.html" data-i18n="nav_home" aria-current="page">Home</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-        <a href="the-experience.html" data-i18n="nav_experiences">Experiences</a>
-        <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      </nav>
 
-      <div class="header-actions">
-        <label class="language-select language-wrap">
-          <span class="sr-only" data-i18n="language_label">Language</span>
-          <select data-language-select aria-label="Language" data-i18n-aria-label="language_label">
-            <option value="en" data-i18n="language_option_en">EN</option>
-            <option value="fr" data-i18n="language_option_fr">FR</option>
-            <option value="ar" data-i18n="language_option_ar">AR</option>
-            <option value="de" data-i18n="language_option_de">DE</option>
-            <option value="it" data-i18n="language_option_it">IT</option>
-            <option value="pt" data-i18n="language_option_pt">PT</option>
-          </select>
-        </label>
-        <a class="btn btn-primary button button-primary header-cta header-button" href="contact.html"
-          data-i18n="book_now">Book Now</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
-          data-menu-toggle>
-          <span class="sr-only" data-i18n="menu_toggle">Open menu</span>
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-      <nav aria-label="Mobile navigation" data-i18n-aria-label="nav_mobile_label">
-        <a href="index.html" data-i18n="nav_home" aria-current="page">Home</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-        <a href="the-experience.html" data-i18n="nav_experiences">Experiences</a>
-        <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      </nav>
-      <a class="btn btn-primary button button-primary" href="contact.html" data-i18n="book_now">Book Now</a>
-    </div>
-  </header>
 
   <main id="main">
-    <section class="hero hero-home" id="home">
-      <img class="hero-image" src="./assets/images/hero-desert.jpg" width="1800" height="1200"
+    <section class="hero hero-home" id="hero">
+      <img class="hero-image" src="./assets/img/hero-desert.jpg" width="1800" height="1200"
         alt="Agafay desert horizon at sunset" fetchpriority="high" data-i18n-alt="hero_desert_alt" />
       <div class="hero-overlay hero-shade" aria-hidden="true"></div>
       <div class="hero-content reveal">
@@ -77,7 +34,7 @@
           desert.</p>
         <div class="hero-actions">
           <a class="btn btn-light button button-light" href="contact.html" data-i18n="book_escape">Book Your Escape</a>
-          <a class="btn btn-ghost-light button button-outline-light" href="the-experience.html"
+          <a class="btn btn-ghost-light button button-outline-light" href="services.html"
             data-i18n="view_experiences">View Experiences</a>
         </div>
       </div>
@@ -94,13 +51,13 @@
           <a class="text-link" href="about.html" data-i18n="learn_about">Learn about the retreat</a>
         </div>
         <figure class="media-frame image-frame reveal">
-          <img src="./assets/images/architecture.jpeg" width="900" height="1200" alt="Minimalist Architecture" data-i18n-alt="architecture_alt"
+          <img src="./assets/img/architecture.jpeg" width="900" height="1200" alt="Minimalist Architecture" data-i18n-alt="architecture_alt"
             loading="lazy" />
         </figure>
       </div>
     </section>
 
-    <section class="section band" id="journeys">
+    <section class="section band featured-services" id="featured-services">
       <div class="container">
         <div class="section-head section-heading reveal">
           <p class="eyebrow" data-i18n="curated_escapes">Curated Escapes</p>
@@ -108,18 +65,18 @@
         </div>
         <div class="journey-grid card-grid">
           <article class="stay-card feature-card reveal">
-            <img src="./assets/images/golden-hour.jpeg" width="900" height="650" alt="Sunset Dromadaire Trek" data-i18n-alt="golden_hour_alt"
+            <img src="./assets/img/golden-hour.jpeg" width="900" height="650" alt="Sunset Dromadaire Trek" data-i18n-alt="golden_hour_alt"
               loading="lazy" />
             <div class="card-body">
               <span class="badge" data-i18n="morning">Morning</span>
               <h3 data-i18n="golden_hour_title">The Golden Hour Signature</h3>
               <p data-i18n="golden_hour_text">A seamless transition from high-energy adventure to traditional serenity,
                 culminating in a festive cultural dinner.</p>
-              <a class="text-link" href="the-experience.html#golden-hour" data-i18n="discover">Discover</a>
+              <a class="text-link" href="services.html#golden-hour" data-i18n="discover">Discover</a>
             </div>
           </article>
           <article class="stay-card feature-card reveal">
-            <img src="./assets/images/pool-oasis.jpg" width="900" height="650" alt="Infinity Pool Oasis" data-i18n-alt="pool_oasis_alt"
+            <img src="./assets/img/pool-oasis.jpg" width="900" height="650" alt="Infinity Pool Oasis" data-i18n-alt="pool_oasis_alt"
               loading="lazy" />
             <div class="card-body">
               <span class="badge" data-i18n="sunset">Sunset</span>
@@ -127,65 +84,65 @@
               <p data-i18n="ourika_text">Trade the heat of the city for the refreshing altitudes of the High Atlas
                 Mountains. Discover authentic Berber culture, cascading waterfalls, and lush river valleys on this
                 curated full-day excursion.</p>
-              <a class="text-link" href="the-experience.html#ourika" data-i18n="discover">Discover</a>
+              <a class="text-link" href="services.html#ourika" data-i18n="discover">Discover</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="experiences">
+    <section class="section services-list" id="services">
       <div class="container">
         <div class="split-head split-heading reveal">
           <div>
             <p class="eyebrow" data-i18n="curated_journeys">Curated Journeys</p>
             <h2 data-i18n="experience_title">The Experience</h2>
           </div>
-          <a class="btn btn-secondary button button-secondary" href="the-experience.html" data-i18n="all_experiences">All
+          <a class="btn btn-secondary button button-secondary" href="services.html" data-i18n="all_experiences">All
             Experiences</a>
         </div>
         <div class="experience-grid compact">
           <article class="experience-card reveal">
-            <img src="./assets/images/quad.jpeg" width="700" height="700" alt="Quad Expedition" data-i18n-alt="quad_alt" loading="lazy" />
+            <img src="./assets/img/quad.jpeg" width="700" height="700" alt="Quad Expedition" data-i18n-alt="quad_alt" loading="lazy" />
             <div>
               <h3 data-i18n="quad_title">Quad Expeditions</h3>
               <p data-i18n="quad_text">Explore the rugged topography of the lunar desert on a high-powered journey
                 through hidden canyons.</p>
-              <a href="the-experience.html#quad" data-i18n="details">Details</a>
+              <a href="services.html#quad" data-i18n="details">Details</a>
             </div>
           </article>
           <article class="experience-card reveal">
-            <img src="./assets/images/camel.jpeg" width="700" height="700" alt="Camel Treks" data-i18n-alt="camel_alt" loading="lazy" />
+            <img src="./assets/img/camel.jpeg" width="700" height="700" alt="Camel Treks" data-i18n-alt="camel_alt" loading="lazy" />
             <div>
               <h3 data-i18n="camel_title">Camel Treks</h3>
               <p data-i18n="camel_text">The timeless way to travel the dunes, guided by local experts as the horizon
                 turns to liquid gold.</p>
-              <a href="the-experience.html#camel" data-i18n="details">Details</a>
+              <a href="services.html#camel" data-i18n="details">Details</a>
             </div>
           </article>
           <article class="experience-card reveal">
-            <img src="./assets/images/pool-day.jpeg" width="700" height="700" alt="Pool Days" data-i18n-alt="pool_day_alt" loading="lazy" />
+            <img src="./assets/img/pool-day.jpeg" width="700" height="700" alt="Pool Days" data-i18n-alt="pool_day_alt" loading="lazy" />
             <div>
               <h3 data-i18n="pool_title">Pool Days with Lunch</h3>
               <p data-i18n="pool_text">An oasis of cool waters paired with organic Moroccan cuisine sourced from our
                 desert gardens.</p>
-              <a href="the-experience.html#pool" data-i18n="details">Details</a>
+              <a href="services.html#pool" data-i18n="details">Details</a>
             </div>
           </article>
           <article class="experience-card reveal">
-            <img src="./assets/images/dinner.jpeg" width="700" height="700" alt="Dinner Shows" data-i18n-alt="dinner_alt" loading="lazy" />
+            <img src="./assets/img/dinner.jpeg" width="700" height="700" alt="Dinner Shows" data-i18n-alt="dinner_alt" loading="lazy" />
             <div>
               <h3 data-i18n="dinner_title">Dinner Shows</h3>
               <p data-i18n="dinner_text">Under a canopy of a thousand stars, experience the rhythms and flavors of
                 ancestral Berber nights.</p>
-              <a href="the-experience.html#dinner" data-i18n="details">Details</a>
+              <a href="services.html#dinner" data-i18n="details">Details</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section why-section dark-section" id="stays">
+    <section class="section why-section dark-section benefits" id="benefits">
       <div class="container intro-grid two-col">
         <div class="section-copy reveal">
           <p class="eyebrow" data-i18n="overnight_residence">Overnight Residence</p>
@@ -195,7 +152,7 @@
           <a class="btn btn-light button button-light" href="contact.html" data-i18n="book_stay">Book Your Stay</a>
         </div>
         <figure class="media-frame image-frame reveal">
-          <img src="./assets/images/villa.jpeg" width="900" height="1100" alt="Luxury Desert Villa" data-i18n-alt="villa_alt" loading="lazy" />
+          <img src="./assets/img/villa.jpeg" width="900" height="1100" alt="Luxury Desert Villa" data-i18n-alt="villa_alt" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -203,7 +160,7 @@
     <section class="section band" id="arrivals">
       <div class="container intro-grid two-col reverse">
         <figure class="media-frame image-frame reveal">
-          <img src="./assets/images/transfer.jpg" width="900" height="700" alt="Marrakech Medina Gates" data-i18n-alt="transfer_alt"
+          <img src="./assets/img/transfer.jpg" width="900" height="700" alt="Marrakech Medina Gates" data-i18n-alt="transfer_alt"
             loading="lazy" />
         </figure>
         <div class="section-copy reveal">
@@ -257,7 +214,7 @@
       </div>
     </section>
 
-    <section class="cta-panel">
+    <section class="cta-panel cta" id="cta">
       <div class="container reveal">
         <h2 data-i18n="ordinary_cta">Ready to escape the ordinary?</h2>
         <a class="btn btn-primary button button-primary" href="contact.html" data-i18n="book_adventure">Book Your
@@ -266,67 +223,15 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img class="footer-logo" src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo" data-i18n-alt="logo_alt"
-          loading="lazy" />
-        <p data-i18n="footer_desc">A sanctuary of pure silence in the heart of the stone desert. Designed for those who
-          seek deep rest and connection with the horizon.</p>
-      </div>
-      <nav aria-label="Explore" data-i18n-aria-label="nav_explore_label">
-        <h2 data-i18n="explore">Explore</h2>
-        <a href="index.html" data-i18n="footer_retreat">The Retreat</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-        <a href="the-experience.html" data-i18n="footer_experiences">Curated Experiences</a>
-        <a href="contact.html" data-i18n="footer_contact">Contact Us</a>
-      </nav>
-      <nav aria-label="Information" data-i18n-aria-label="nav_information_label">
-        <h3 data-i18n="info_heading">Information</h3>
-        <a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a>
-        <a href="terms.html" data-i18n="terms">Terms &amp; Conditions</a>
-        <a href="cancellation-policy.html" data-i18n="cancellation">Cancellation Policy</a>
-        <a href="contact.html" data-i18n="contact">Contact</a>
-      </nav>
-      <div>
-        <h2 data-i18n="footer_contact">Contact Us</h2>
-        <p data-i18n="footer_contact_text">Fast booking by WhatsApp, phone, or email.</p>
-        <a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener"
-          data-i18n="mobile_whatsapp">WhatsApp</a>
-        <a href="tel:+212600111768" data-i18n="mobile_call">Call</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=serenity@agafayretreat.com&su=Booking%20request%20-%20The%20Agafay%20Retreat"
-          target="_blank" rel="noopener" data-i18n="email">Email</a>
-        <label class="footer-language">
-          <span data-i18n="language_label">Language</span>
-          <select data-footer-language aria-label="Language" data-i18n-aria-label="language_label">
-            <option value="en" data-i18n="language_option_en">EN</option>
-            <option value="fr" data-i18n="language_option_fr">FR</option>
-            <option value="ar" data-i18n="language_option_ar">AR</option>
-            <option value="de" data-i18n="language_option_de">DE</option>
-            <option value="it" data-i18n="language_option_it">IT</option>
-            <option value="pt" data-i18n="language_option_pt">PT</option>
-          </select>
-        </label>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span data-i18n="copyright">Copyright 2024 Agafay Silent Retreat. All rights reserved.</span>
-      <span><a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a> &middot; <a href="terms.html" data-i18n="terms">Terms &amp;
-          Conditions</a> &middot; <a href="cancellation-policy.html" data-i18n="cancellation">Cancellation Policy</a></span>
-    </div>
-  </footer>
+  <div data-site-footer></div>
 
-  <div class="mobile-cta-bar">
-    <a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener"
-      data-i18n="mobile_whatsapp">WhatsApp</a>
-    <a href="contact.html" data-i18n="mobile_book">Book Now</a>
-    <a href="tel:+212600111768" data-i18n="mobile_call">Call</a>
-  </div>
-  <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank"
-    rel="noopener noreferrer nofollow" data-i18n="mobile_whatsapp">WhatsApp</a>
 
-  <script src="./js/translations.js"></script>
-  <script src="./js/main.js"></script>
+
+
+
+
+  <script src="./assets/js/translations.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

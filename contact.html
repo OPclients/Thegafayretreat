@@ -1,46 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="contact_meta_title">Contact | The Agafay Retreat</title>
   <meta name="description" content="Contact and book The Agafay Retreat." data-i18n-content="contact_meta_description" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body data-page="contact">
   <a class="skip-link" href="#main" data-i18n="skip_to_content">Skip to content</a>
-  <header class="site-header is-solid" data-header>
-    <div class="header-inner"><a class="logo" href="index.html" aria-label="The Agafay Retreat home" data-i18n-aria-label="brand_home_label"><img src="./assets/images/logo.png" width="220"
-          height="145" alt="Agafay Silent Logo" data-i18n-alt="logo_alt" /></a>
-      <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria-label="nav_main_label"><a href="index.html" data-i18n="nav_home">Home</a><a
-          href="about.html" data-i18n="nav_about">About</a><a href="the-experience.html"
-          data-i18n="nav_experiences">Experiences</a><a href="contact.html" data-i18n="nav_contact"
-          aria-current="page">Contact</a></nav>
-      <div class="header-actions"><label class="language-wrap"><span class="sr-only"
-            data-i18n="language_label">Language</span><select data-language-select aria-label="Language" data-i18n-aria-label="language_label">
-            <option value="en" data-i18n="language_option_en">EN</option>
-            <option value="fr" data-i18n="language_option_fr">FR</option>
-            <option value="ar" data-i18n="language_option_ar">AR</option>
-            <option value="de" data-i18n="language_option_de">DE</option>
-            <option value="it" data-i18n="language_option_it">IT</option>
-            <option value="pt" data-i18n="language_option_pt">PT</option>
-          </select></label><a class="button button-primary header-button" href="contact.html" data-i18n="book_now">Book
-          Now</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
-          data-menu-toggle><span class="sr-only" data-i18n="menu_toggle">Open
-            menu</span><span></span><span></span><span></span></button></div>
-    </div>
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-      <nav aria-label="Mobile navigation" data-i18n-aria-label="nav_mobile_label"><a href="index.html" data-i18n="nav_home">Home</a><a href="about.html"
-          data-i18n="nav_about">About</a><a href="the-experience.html" data-i18n="nav_experiences">Experiences</a><a
-          href="contact.html" data-i18n="nav_contact" aria-current="page">Contact</a></nav><a
-        class="button button-primary" href="contact.html" data-i18n="book_now">Book Now</a>
-    </div>
-  </header>
+
+  <div data-site-nav></div>
+
   <main id="main">
-    <section class="page-hero compact-hero">
-      <img class="hero-image" src="./assets/images/transfer.jpg" width="1400" height="900" alt=""
+    <section class="page-hero compact-hero page-header" id="contact-header">
+      <img class="hero-image" src="./assets/img/transfer.jpg" width="1400" height="900" alt="Route vers le desert d'Agafay depuis Marrakech"
         fetchpriority="high" />
       <div class="hero-shade"></div>
       <div class="page-hero-content reveal"><span data-i18n="contact_kicker">Contact & booking</span>
@@ -49,7 +25,7 @@
           WhatsApp with your request ready to send.</p>
       </div>
     </section>
-    <section class="section">
+    <section class="section contact-info" id="contact-info">
       <div class="container">
         <div class="contact-option-grid reveal">
           <article class="contact-option primary"><span data-i18n="contact_option_whatsapp">WhatsApp</span>
@@ -65,8 +41,8 @@
               aria-label="Call The Agafay Retreat at +212600111768" data-i18n-aria-label="call_retreat_label" data-i18n="mobile_call">Call</a>
           </article>
           <a class="contact-option"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=serenity@agafayretreat.com&su=Booking%20request%20-%20The%20Agafay%20Retreat"
-            target="_blank" rel="noopener" aria-label="Email The Agafay Retreat in Gmail" data-i18n-aria-label="email_retreat_label"><span
+            href="mailto:serenity@agafayretreat.com?subject=Booking%20request%20-%20The%20Agafay%20Retreat"
+            aria-label="Email The Agafay Retreat" data-i18n-aria-label="email_retreat_label"><span
               data-i18n="contact_option_email">Email</span>
             <h3 data-i18n="contact_option_email_title">Send details</h3>
             <p data-i18n="contact_option_email_text">Share dates, guests, and the experience you want.</p><span
@@ -80,7 +56,7 @@
         </div>
       </div>
     </section>
-    <section class="section contact-form-section">
+    <section class="section contact-form-section contact-form" id="contact-form">
       <div class="container contact-layout">
         <div class="contact-panel reveal">
 
@@ -130,7 +106,30 @@
         </form>
       </div>
     </section>
-    <section class="section band">
+    <section class="section band opening-hours" id="opening-hours">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span data-i18n="hours_kicker">Horaires</span>
+          <h2 data-i18n="hours_title">Ouvert tous les jours sur reservation.</h2>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <h3 data-i18n="hours_week_title">Lundi - Dimanche</h3>
+            <p data-i18n="hours_week_text">09:00 - 22:00</p>
+          </article>
+          <article class="value-card reveal">
+            <h3 data-i18n="hours_booking_title">Reservation recommandee</h3>
+            <p data-i18n="hours_booking_text">Contactez-nous avant votre visite pour confirmer la disponibilite et le transfert.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3 data-i18n="hours_response_title">Reponse rapide</h3>
+            <p data-i18n="hours_response_text">WhatsApp est le moyen le plus rapide pour organiser votre experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band faq-section" id="faq">
       <div class="container faq-layout">
         <div class="section-copy reveal"><span data-i18n="faq_kicker">Before you book</span>
           <h2 data-i18n="faq_title">A few useful details.</h2>
@@ -161,55 +160,12 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><img class="footer-logo" src="./assets/images/logo.png" width="220" height="145" alt="Agafay Silent Logo" data-i18n-alt="logo_alt"
-          loading="lazy" />
-        <p data-i18n="footer_desc">A sanctuary of pure silence in the heart of the stone desert. Designed for those who
-          seek deep rest and connection with the horizon.</p>
-   
-      </div>
-      <nav aria-label="Explore" data-i18n-aria-label="nav_explore_label">
-        <h2 data-i18n="explore">Explore</h2><a href="index.html" data-i18n="footer_retreat">The Retreat</a><a
-          href="about.html" data-i18n="nav_about">About</a><a href="the-experience.html"
-          data-i18n="footer_experiences">Curated Experiences</a><a href="contact.html"
-          data-i18n="footer_contact">Contact Us</a>
-      </nav>
-      <nav aria-label="Information" data-i18n-aria-label="nav_information_label">
-        <h3 data-i18n="info_heading">Information</h3>
-        <a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a>
-        <a href="terms.html" data-i18n="terms">Terms &amp; Conditions</a>
-        <a href="cancellation-policy.html" data-i18n="cancellation">Cancellation Policy</a>
-        <a href="contact.html" data-i18n="contact">Contact</a>
-      </nav>
-      <div>
-        <h2 data-i18n="footer_contact">Contact Us</h2>
-        <p data-i18n="footer_contact_text">Fast booking by WhatsApp, phone, or email.</p><a
-          href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank" rel="noopener"
-          data-i18n="mobile_whatsapp">WhatsApp</a><a href="tel:+212600111768"
-          aria-label="Call The Agafay Retreat at +212600111768" data-i18n-aria-label="call_retreat_label" data-i18n="mobile_call">Call</a><a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=serenity@agafayretreat.com&su=Booking%20request%20-%20The%20Agafay%20Retreat"
-          target="_blank" rel="noopener" aria-label="Email The Agafay Retreat in Gmail" data-i18n-aria-label="email_retreat_label"
-          data-i18n="email">Email</a><label class="footer-language"><span
-            data-i18n="language_label">Language</span><select data-footer-language aria-label="Language" data-i18n-aria-label="language_label">
-            <option value="en" data-i18n="language_option_en">EN</option>
-            <option value="fr" data-i18n="language_option_fr">FR</option>
-            <option value="ar" data-i18n="language_option_ar">AR</option>
-            <option value="de" data-i18n="language_option_de">DE</option>
-            <option value="it" data-i18n="language_option_it">IT</option>
-            <option value="pt" data-i18n="language_option_pt">PT</option>
-          </select></label>
-      </div>
-    </div>
-    <div class="container footer-bottom"><span data-i18n="copyright">&copy; 2024 Agafay Silent Retreat. All rights
-        reserved.</span><span><a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a> &middot; <a
-          href="terms.html" data-i18n="terms">Terms &amp; Conditions</a> &middot; <a href="cancellation-policy.html" data-i18n="cancellation">Cancellation Policy</a></span></div>
-  </footer>
-  <div class="mobile-cta-bar"><a href="https://api.whatsapp.com/send?phone=212633049321&text=" target="_blank"
-      rel="noopener" data-i18n="mobile_whatsapp">WhatsApp</a><a href="contact.html" data-i18n="mobile_book">Book
-      Now</a><a href="tel:+212600111768" data-i18n="mobile_call">Call</a></div>
-  <script src="./js/translations.js"></script>
-  <script src="./js/main.js"></script>
+
+  <div data-site-footer></div>
+
+
+  <script src="./assets/js/translations.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

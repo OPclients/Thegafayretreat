@@ -169,7 +169,10 @@ a, button, input, select, textarea { outline-offset: 4px; }
 }
 
 .desktop-nav a:hover::after,
-.desktop-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.desktop-nav a:focus-visible::after,
+.desktop-nav a.active::after { transform: scaleX(1); transform-origin: left; }
+
+.site-footer a.active { color: var(--cream); }
 
 .language-select select,
 .language-wrap select,

@@ -2619,7 +2619,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "New York, USA",
     testimonial_6_location: "Madrid, Spain",
     call_retreat_label: "Call The Agafay Retreat at +212600111768",
-    email_retreat_label: "Email The Agafay Retreat in Gmail",
+    email_retreat_label: "Email The Agafay Retreat",
     map_label: "Commune d'Agafay, Marrakech-Safi Region, Morocco",
     terms_accommodation_title: "Accommodation and third-party services",
     terms_accommodation_text: "When accommodation, restaurants, activities, or other third-party services are included, availability and standards may vary by location, season, and supplier. If a confirmed supplier becomes unavailable, we may offer a similar alternative where possible.",
@@ -2661,7 +2661,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "New York, Etats-Unis",
     testimonial_6_location: "Madrid, Espagne",
     call_retreat_label: "Appeler The Agafay Retreat au +212600111768",
-    email_retreat_label: "Envoyer un email a The Agafay Retreat dans Gmail",
+    email_retreat_label: "Envoyer un email a The Agafay Retreat",
     map_label: "Commune d'Agafay, region Marrakech-Safi, Maroc",
     terms_accommodation_title: "Hebergement et services tiers",
     terms_accommodation_text: "Lorsque l'hebergement, les restaurants, les activites ou d'autres services tiers sont inclus, la disponibilite et les standards peuvent varier selon le lieu, la saison et le fournisseur. Si un fournisseur confirme devient indisponible, nous pouvons proposer une alternative similaire lorsque c'est possible.",
@@ -2703,7 +2703,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "نيويورك، الولايات المتحدة",
     testimonial_6_location: "مدريد، إسبانيا",
     call_retreat_label: "اتصل بـ The Agafay Retreat على +212600111768",
-    email_retreat_label: "إرسال بريد إلكتروني إلى The Agafay Retreat عبر Gmail",
+    email_retreat_label: "Email The Agafay Retreat",
     map_label: "جماعة أغافاي، جهة مراكش آسفي، المغرب",
     terms_accommodation_title: "الإقامة والخدمات الخارجية",
     terms_accommodation_text: "عند تضمين الإقامة أو المطاعم أو الأنشطة أو خدمات خارجية أخرى، قد تختلف التوفر والمعايير حسب الموقع والموسم والمورد. إذا أصبح مورد مؤكد غير متاح، فقد نقترح بديلا مشابها متى أمكن.",
@@ -2745,7 +2745,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "New York, USA",
     testimonial_6_location: "Madrid, Spanien",
     call_retreat_label: "The Agafay Retreat unter +212600111768 anrufen",
-    email_retreat_label: "The Agafay Retreat in Gmail per E-Mail kontaktieren",
+    email_retreat_label: "The Agafay Retreat per E-Mail kontaktieren",
     map_label: "Gemeinde Agafay, Region Marrakesch-Safi, Marokko",
     terms_accommodation_title: "Unterkunft und Drittanbieterleistungen",
     terms_accommodation_text: "Wenn Unterkunft, Restaurants, Aktivitaten oder andere Drittanbieterleistungen enthalten sind, konnen Verfugbarkeit und Standards je nach Ort, Saison und Anbieter variieren. Wenn ein bestatigter Anbieter nicht verfugbar wird, konnen wir nach Moglichkeit eine ahnliche Alternative anbieten.",
@@ -2787,7 +2787,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "New York, USA",
     testimonial_6_location: "Madrid, Spagna",
     call_retreat_label: "Chiama The Agafay Retreat al +212600111768",
-    email_retreat_label: "Invia un'email a The Agafay Retreat in Gmail",
+    email_retreat_label: "Invia un'email a The Agafay Retreat",
     map_label: "Comune di Agafay, regione Marrakech-Safi, Marocco",
     terms_accommodation_title: "Alloggio e servizi di terzi",
     terms_accommodation_text: "Quando sono inclusi alloggi, ristoranti, attivita o altri servizi di terzi, disponibilita e standard possono variare in base a luogo, stagione e fornitore. Se un fornitore confermato diventa non disponibile, possiamo offrire un'alternativa simile quando possibile.",
@@ -2829,7 +2829,7 @@ const fullSurfaceTranslationPatch = {
     testimonial_5_location: "Nova Iorque, EUA",
     testimonial_6_location: "Madrid, Espanha",
     call_retreat_label: "Ligar para The Agafay Retreat em +212600111768",
-    email_retreat_label: "Enviar email para The Agafay Retreat no Gmail",
+    email_retreat_label: "Enviar email para The Agafay Retreat",
     map_label: "Comuna de Agafay, regiao Marrakech-Safi, Marrocos",
     terms_accommodation_title: "Alojamento e servicos de terceiros",
     terms_accommodation_text: "Quando alojamento, restaurantes, atividades ou outros servicos de terceiros estao incluidos, disponibilidade e padroes podem variar conforme local, epoca e fornecedor. Se um fornecedor confirmado ficar indisponivel, podemos oferecer alternativa semelhante quando possivel.",
@@ -2965,6 +2965,101 @@ Object.keys(strictCoveragePatch).forEach((language) => {
   translations[language] = {
     ...translations[language],
     ...strictCoveragePatch[language]
+  };
+});
+
+const jungleTemplatePatch = {
+  en: {
+    nav_experiences: "Services",
+    experience_meta_title: "Services | The Agafay Retreat",
+    all_experiences: "All Services",
+    view_experiences: "View Services",
+    footer_experiences: "Services",
+    email_retreat_label: "Email The Agafay Retreat",
+    footer_address: "Agafay Desert, Marrakech-Safi, Morocco",
+    process_kicker: "Booking",
+    process_title: "How to organize your experience.",
+    process_step_1_title: "1. Choose your service",
+    process_step_1_text: "Select a pool day, ride, dinner, transfer, or stay.",
+    process_step_2_title: "2. Send your details",
+    process_step_2_text: "Share the date, guest count, and needs through the form or WhatsApp.",
+    process_step_3_title: "3. Confirm by message",
+    process_step_3_text: "Our team confirms availability, final price, and arrival details.",
+    hours_kicker: "Opening hours",
+    hours_title: "Open daily by reservation.",
+    hours_week_title: "Monday - Sunday",
+    hours_week_text: "09:00 - 22:00",
+    hours_booking_title: "Reservation recommended",
+    hours_booking_text: "Contact us before your visit to confirm availability and transfer.",
+    hours_response_title: "Fast reply",
+    hours_response_text: "WhatsApp is the fastest way to organize your experience."
+  },
+  fr: {
+    nav_experiences: "Services",
+    nav_about: "A propos",
+    experience_meta_title: "Services | The Agafay Retreat",
+    book_now: "Reserver",
+    mobile_book: "Reserver",
+    all_experiences: "Tous les services",
+    view_experiences: "Voir les services",
+    footer_experiences: "Services",
+    email_retreat_label: "Envoyer un email a The Agafay Retreat",
+    footer_address: "Desert d'Agafay, Marrakech-Safi, Maroc",
+    footer_contact: "Contact",
+    footer_contact_text: "Reservation rapide par WhatsApp, telephone ou email.",
+    info_heading: "Informations",
+    copyright: "Copyright 2024 Agafay Silent Retreat. Tous droits reserves.",
+    process_kicker: "Reservation",
+    process_title: "Comment organiser votre experience.",
+    process_step_1_title: "1. Choisissez votre service",
+    process_step_1_text: "Selectionnez une journee piscine, une balade, un diner, un transfert ou un sejour.",
+    process_step_2_title: "2. Envoyez vos details",
+    process_step_2_text: "Partagez la date, le nombre de personnes et vos besoins via le formulaire ou WhatsApp.",
+    process_step_3_title: "3. Confirmez par message",
+    process_step_3_text: "Notre equipe confirme la disponibilite, le prix final et les details d'arrivee.",
+    hours_kicker: "Horaires",
+    hours_title: "Ouvert tous les jours sur reservation.",
+    hours_week_title: "Lundi - Dimanche",
+    hours_week_text: "09:00 - 22:00",
+    hours_booking_title: "Reservation recommandee",
+    hours_booking_text: "Contactez-nous avant votre visite pour confirmer la disponibilite et le transfert.",
+    hours_response_title: "Reponse rapide",
+    hours_response_text: "WhatsApp est le moyen le plus rapide pour organiser votre experience."
+  },
+  ar: {
+    nav_experiences: "الخدمات",
+    experience_meta_title: "الخدمات | The Agafay Retreat",
+    footer_experiences: "الخدمات",
+    email_retreat_label: "إرسال بريد إلكتروني إلى The Agafay Retreat",
+    footer_address: "صحراء أغافاي، مراكش آسفي، المغرب"
+  },
+  de: {
+    nav_experiences: "Services",
+    experience_meta_title: "Services | The Agafay Retreat",
+    footer_experiences: "Services",
+    email_retreat_label: "The Agafay Retreat per E-Mail kontaktieren",
+    footer_address: "Agafay-Wuste, Marrakesch-Safi, Marokko"
+  },
+  it: {
+    nav_experiences: "Servizi",
+    experience_meta_title: "Servizi | The Agafay Retreat",
+    footer_experiences: "Servizi",
+    email_retreat_label: "Invia un'email a The Agafay Retreat",
+    footer_address: "Deserto di Agafay, Marrakech-Safi, Marocco"
+  },
+  pt: {
+    nav_experiences: "Servicos",
+    experience_meta_title: "Servicos | The Agafay Retreat",
+    footer_experiences: "Servicos",
+    email_retreat_label: "Enviar email para The Agafay Retreat",
+    footer_address: "Deserto de Agafay, Marrakech-Safi, Marrocos"
+  }
+};
+
+Object.keys(jungleTemplatePatch).forEach((language) => {
+  translations[language] = {
+    ...translations[language],
+    ...jungleTemplatePatch[language]
   };
 });
 
